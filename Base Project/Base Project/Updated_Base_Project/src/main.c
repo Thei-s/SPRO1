@@ -8,6 +8,8 @@
 //Declare global variables etc. here
 
 //Declare function prototypes here
+void write_to_screen_int(int value, const char *variable_name);
+void write_to_screen_float(float value, const char *variable_name);
 
 int main(void)
 {   	 
@@ -21,3 +23,10 @@ int main(void)
 }
 
 //Put in function implementations here
+void write_to_screen_int(int value, const char *variable_name) {
+    printf("%s.val=%d\xFF\xFF\xFF", variable_name, value);
+}
+
+void write_to_screen_float(float value, const char *variable_name) {
+    printf("%s.txt=\"%.2f\"\xFF\xFF\xFF", variable_name, value);
+}
